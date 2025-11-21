@@ -1,0 +1,15 @@
+<div [style.backgroundColor]="backgroundColor" class="d-flex gap-2 p-3 rounded">
+    <input 
+        #colorInput
+        type="text" 
+        class="form-control"
+        placeholder="Entrez une couleur"
+        (change)="onColorChange(colorInput.value)"
+    />
+    <button class="btn btn-primary" (click)="resetColor()">Réinitialiser</button>
+  
+</div>
+  the colour is {{backgroundColor}}
+
+
+  

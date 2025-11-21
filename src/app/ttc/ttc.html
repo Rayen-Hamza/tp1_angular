@@ -1,0 +1,39 @@
+<h1 class="title ">TTC Calculator </h1>
+
+<div class="ttc-container">
+  
+  
+  <div class="inputs-row">
+    <div class="input-item">
+      <input type="number" [(ngModel)]="prixHT" class="form-control" />
+      <label>Prix HT</label>
+    </div>
+    
+    <div class="input-item">
+      <input type="number" [(ngModel)]="quantite" class="form-control" />
+      <label>Quantité</label>
+    </div>
+    
+    <div class="input-item">
+      <input type="number" [(ngModel)]="tva" class="form-control" />
+      <label>TVA</label>
+    </div>
+  </div>
+
+  <div class="results-row">
+    <div class="result-item blue">
+      <p class="label">Prix unitaire TTC</p>
+      <p class="value">${{ prixUnitaireTTC() }}</p>
+    </div>
+    
+    <div class="result-item green">
+      <p class="label">Prix total TTC</p>
+      <p class="value">${{ prixTotalTTC() }}</p>
+    </div>
+    
+    <div class="result-item red">
+      <p class="label">Discount</p>
+      <p class="value">${{ remise() }}</p>
+    </div>
+  </div>
+</div> 

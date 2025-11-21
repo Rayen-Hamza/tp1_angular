@@ -1,0 +1,13 @@
+<h4 class="title">Platform Cv </h4>
+
+<div class="row">
+    <div class="col-md-6 col-sm-3" >
+        <app-liste-cv (selectedCv)="selectCv($event)" [Cvs]="Cvs" >  </app-liste-cv>
+    </div>
+    <div class="col-md-6 col-sm-6">
+       
+            <app-detail-cv [Cv]="selectedCv"> </app-detail-cv>
+      
+        
+    </div>
+</div>

@@ -1,0 +1,117 @@
+<h4 class="title">Two way data binding </h4>
+<div class="container">
+
+
+
+<div class="col-md-6 col-sm-6      "  >
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <div class="cover">
+            <img src="images/rotating_card_thumb3.png"/>
+          </div>
+          <div class="user">
+          
+
+            <img class="img-circle" src="{{ personne.image }}"/>
+          </div>
+          <div class="content">
+            <div class="main">
+              <h3 class="name">{{ personne.name }}</h3>
+              <p class="profession">{{ personne.profession }}</p>
+              <p class="text-center">"{{ personne.motto }}"</p>
+            </div>
+            <div class="footer">
+              <div class="rating">
+                <i class="fa fa-mail-forward"></i> Auto Rotation
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="header">
+            <h5 class="motto">"{{ personne.motto }}"</h5>
+          </div>
+          <div class="content">
+            <div class="main">
+              <h4 class="text-center">Job Description</h4>
+              <p class="text-center">{{ personne.jobDescription }}</p>
+  
+              <div class="stats-container">
+                <div class="stats">
+                  <h4>{{ personne.followers }}</h4>
+                  <p>Followers</p>
+                </div>
+                <div class="stats">
+                  <h4>{{ personne.following }}</h4>
+                  <p>Following</p>
+                </div>
+                <div class="stats">
+                  <h4>{{ personne.projects }}</h4>
+                  <p>Projects</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+</div>
+    
+    <div class="form-card">
+      <div class="form-title">
+        <h2>Edit Profile</h2>
+      </div>
+
+
+      <div class="form-container">
+
+<form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input [(ngModel)]="personne.name" name="name" id="name" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="profession">Profession</label>
+    <input [(ngModel)]="personne.profession" name="profession" id="profession" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="motto">Motto</label>
+    <input [(ngModel)]="personne.motto" name="motto" id="motto" type="text" class="form-control" >
+  </div>
+
+  <div class="form-group">
+    <label for="jobDescription">Job Description</label>
+    <textarea [(ngModel)]="personne.jobDescription" name="jobDescription" id="jobDescription" class="form-control" ></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="followers">Followers</label>
+    <input [(ngModel)]="personne.followers" name="followers" id="followers" type="number" class="form-control" >
+  </div>
+
+  <div class="form-group">
+    <label for="following">Following</label>
+    <input [(ngModel)]="personne.following" name="following" id="following" type="number" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="projects">Projects</label>
+    <input [(ngModel)]="personne.projects" name="projects" id="projects" type="number" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input [(ngModel)]="personne.image" name="image" id="image" type="text" class="form-control">
+  </div>
+
+
+</form>
+</div>
+</div>
+  </div>
+  
