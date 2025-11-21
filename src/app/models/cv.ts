@@ -16,6 +16,6 @@ export class CvModel{
         this.job = job;
         this.path = path;
     }
-
+                
 
 }

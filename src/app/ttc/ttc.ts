@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './ttc.css',
 })
 export class TTC {
-  prixHT = 0;
+  prixHT = 0; 
   quantite = 1;
   tva = 18;
 
@@ -22,6 +22,14 @@ export class TTC {
   }
 
   remise(): number {
-    return this.prixTotalTTC() * 0.1; 
+    const prixTotal = this.prixTotalTTC();
+    
+    if (this.quantite >= 10 && this.quantite <= 15) {
+      return prixTotal * 0.2; // 20% remise
+    } else if (this.quantite > 15) {
+      return prixTotal * 0.3; // 30% remise
+    }
+    
+    return 0; // Pas de remise
   }
 }
