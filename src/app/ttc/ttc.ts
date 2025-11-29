@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -9,27 +9,27 @@ import { CommonModule } from '@angular/common';
   styleUrl: './ttc.css',
 })
 export class TTC {
-  prixHT = 0; 
-  quantite = 1;
-  tva = 18;
+  prixHT = signal<number>(0); 
+  quantite = signal<number>(1);
+  tva = signal<number>(18);
 
-   prixUnitaireTTC(): number {
-    return this.prixHT * (1 + this.tva / 100);
-  }
+  prixUnitaireTTC = computed(() => {
+    return this.prixHT() * (1 + this.tva() / 100);
+  });
 
-  prixTotalTTC(): number {
-    return this.prixUnitaireTTC() * this.quantite;
-  }
+  prixTotalTTC = computed(() => {
+    return this.prixUnitaireTTC() * this.quantite();
+  });
 
-  remise(): number {
+  remise = computed(() => {
     const prixTotal = this.prixTotalTTC();
     
-    if (this.quantite >= 10 && this.quantite <= 15) {
+    if (this.quantite() >= 10 && this.quantite() <= 15) {
       return prixTotal * 0.2; 
-    } else if (this.quantite > 15) {
+    } else if (this.quantite() > 15) {
       return prixTotal * 0.3; 
     }
     
-    return 0; 
-  }
+    return 0;
+  });
 }
