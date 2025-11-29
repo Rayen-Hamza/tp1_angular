@@ -7,13 +7,14 @@
                             
                         </div>
                         <div class="user">
-                            <img class="img-circle" src="{{Cv.path}}">
+                            <img class="img-circle" src="{{Cv().path}}">
                         </div>
                         <div class="content">
                             <div class="main">
-                                <h3 class="name">{{Cv.firstname}} {{Cv.name}}</h3>
-                                <p class="profession">{{Cv.job}}</p>
-                                <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                <h3 class="name">{{Cv().firstname}} {{Cv().name}}</h3>
+                                <p class="profession">{{Cv().job}}</p>
+                                <p class="text-center"> Age : {{Cv().age}} years</p>
+                                <p class="text-center">Cin : {{Cv().cin}} </p>
                             </div>
                             <div class="footer">
                                 <i class="fa fa-mail-forward"></i> Auto Rotation
@@ -22,11 +23,11 @@
                     </div> <!-- end front panel -->
                     <div class="back">
                         <div class="header">
-                            <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                            <h5 class="motto">"to be or not to be "</h5>
                         </div>
                         <div class="content">
                             <div class="main">
-                                <h4 class="text-center">{{Cv.age}} years</h4>
+                                
                                 <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
 
                                 <div class="stats-container">

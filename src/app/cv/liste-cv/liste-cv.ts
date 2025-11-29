@@ -1,4 +1,4 @@
-import { Component, input, Input,Output, EventEmitter} from '@angular/core';
+import { Component, input, output} from '@angular/core';
 import { ItemCv } from '../item-cv/item-cv';
 import { CvModel } from '../../models/cv';
 
@@ -10,13 +10,10 @@ import { CvModel } from '../../models/cv';
 })
 export class ListeCv {
 
+  Cvs = input.required<CvModel[]>();
+  selectedCv = output<CvModel>();
 
-@Input() Cvs!: CvModel[];
-
-@Output() selectedCv = new EventEmitter<CvModel>();
-
-selectCv(cv: CvModel) {
-   
+  selectCv(cv: CvModel) {
     this.selectedCv.emit(cv);
   }
 

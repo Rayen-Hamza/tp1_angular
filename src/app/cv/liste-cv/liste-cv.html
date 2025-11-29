@@ -1,5 +1,5 @@
 <ol class="list-group">
-    @for (cv of Cvs; track cv.id) {
+    @for (cv of Cvs(); track cv.id) {
         <app-item-cv (selectedCv)="selectCv($event)" [Cv]="cv"></app-item-cv>
     }
 </ol>

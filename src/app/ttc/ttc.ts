@@ -25,11 +25,11 @@ export class TTC {
     const prixTotal = this.prixTotalTTC();
     
     if (this.quantite >= 10 && this.quantite <= 15) {
-      return prixTotal * 0.2; // 20% remise
+      return prixTotal * 0.2; 
     } else if (this.quantite > 15) {
-      return prixTotal * 0.3; // 30% remise
+      return prixTotal * 0.3; 
     }
     
-    return 0; // Pas de remise
+    return 0; 
   }
 }

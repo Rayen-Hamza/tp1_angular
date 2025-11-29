@@ -1,4 +1,4 @@
-import { Component, EventEmitter, input , Input, OnInit, Output} from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { CvModel } from '../../models/cv';
 
 @Component({
@@ -7,17 +7,13 @@ import { CvModel } from '../../models/cv';
   templateUrl: './item-cv.html',
   styleUrl: './item-cv.css',
 })
-export class ItemCv  {
+export class ItemCv {
 
-
-  //Cv = input.required<CvModel>();
-  @Input() Cv!: CvModel;
-
-  @Output() selectedCv = new EventEmitter();
-
+  Cv = input.required<CvModel>();
+  selectedCv = output<CvModel>();
 
   selectCv() {
-    this.selectedCv.emit(this.Cv);
+    this.selectedCv.emit(this.Cv());
   }
 
 }

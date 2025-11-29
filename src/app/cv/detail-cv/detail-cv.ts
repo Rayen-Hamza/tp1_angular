@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Cv } from '../cv/cv';
 import { CvModel } from '../../models/cv';
 
@@ -10,8 +10,6 @@ import { CvModel } from '../../models/cv';
 })
 export class DetailCv {
 
-
-  @Input() Cv!:CvModel;
-  
+  Cv = input.required<CvModel>();
 
 }
